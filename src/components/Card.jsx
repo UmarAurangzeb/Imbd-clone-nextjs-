@@ -10,7 +10,7 @@ export default function Card({ result }) {
         <div className='border-2 rounded-sm px-2 dark:border-gray-50 border-black-400 group mr-2 mb-2 ' style={{ width: "300px", height: "300px" }}>
 
             <Link href={`/movie/${result.id}`} >
-                <div className='h-[165px]'>
+                <div className='h-[165px] overflow-hidden'>
                     <Image
                         src={`https://image.tmdb.org/t/p/original${result.backdrop_path || result.poster_path}`}
                         width={300}

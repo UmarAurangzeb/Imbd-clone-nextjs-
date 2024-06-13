@@ -9,7 +9,7 @@ export default async function Page(movieId) {
     console.log(movie);
     return (
         <>
-            <div className='flex flex-col md:flex-row gap-4 items-center mt-4 px-4 content-center overflow-hidden flex-none max-w-6xl mx-auto '>
+            {movie && <div className='flex flex-col md:flex-row gap-4 items-center mt-4 px-4 content-center overflow-hidden flex-none max-w-6xl mx-auto '>
                 <Image src={`https://image.tmdb.org/t/p/original${movie.backdrop_path || movie.poster_path}`}
                     className=''
                     width={500}
@@ -22,7 +22,7 @@ export default async function Page(movieId) {
                     <MovieDescription title="Date Released:" description={movie.release_date} />
                     <MovieDescription title="Rating:" description={movie.vote_average} />
                 </div>
-            </div>
+            </div>}
 
 
         </>
