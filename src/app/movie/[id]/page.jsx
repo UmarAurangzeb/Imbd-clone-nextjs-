@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 import MovieDescription from '../../../components/MovieDescription'
-
+export const dynamic = 'force-dynamic'
 export default async function Page(movieId) {
     let API_KEY = process.env.API_KEY;
     const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId.params.id}?api_key=${API_KEY}`);
